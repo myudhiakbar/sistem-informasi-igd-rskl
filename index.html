@@ -27,12 +27,30 @@
     <title>Sistem Informasi Data Pasien IGD RSUD Kebayoran Lama</title>
   </head>
   <body">
+    <marquee> Selamat datang di website Sistem Informasi Data Pasien IGD RSUD Kebayoran Lama Tahun 2025</marquee>
     <div class="container">
       <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <h3 class="text-center mb-4">Sistem Informasi Data Pasien</h3>
-          <h3 class="text-center mb-4">IGD RSUD Kebayoran Lama</h3>
+          <h3 class="text-center mb-4">SISTEM INFORMASI DATA PASIEN IGD RSUD KEBAYORAN LAMA</h3>
+          <h3 class="text-center mb-4"></h3>
+          <h4 class="text-center mb-4"><span id="tanggalwaktu"></span></div>
+          <script>
+            var tw = new Date();
+            if (tw.getTimezoneOffset() == 0) (a=tw.getTime() + ( 7 *60*60*1000))
+            else (a=tw.getTime());
+            tw.setTime(a);
+            var tahun= tw.getFullYear ();
+            var hari= tw.getDay ();
+            var bulan= tw.getMonth ();
+            var tanggal= tw.getDate ();
+            var hariarray=new Array("Minggu,","Senin,","Selasa,","Rabu,","Kamis,","Jum'at,","Sabtu,");
+            var bulanarray=new Array("Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember");
+            document.getElementById("tanggalwaktu").innerHTML = hariarray[hari]+" "+tanggal+" "+bulanarray[bulan]+" "+tahun+" Jam " + ((tw.getHours() < 10) ? "0" : "") + tw.getHours() + ":" + ((tw.getMinutes() < 10)? "0" : "") + tw.getMinutes() + (" WIB ");
+          </script>
           <h4 class="text-center mb-4" id="packageName"></h4>
+          <br>
+          <br>
+          <br>
           <br>
           <br>
           <br>
@@ -47,6 +65,7 @@
         </div>
       </div>
     </div>
+    <script src="kodejs.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap.min.js"></script>
@@ -83,5 +102,13 @@
     });
   });
     </script>
+    <script>
+      setTimeout(function() {
+          location.reload();
+      }, 300000);
+      </script>
+  <div style="text-align: center; padding-top: 20px; padding-bottom: 30px;">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/AD4eCbhn9qM?si=en9_3jLax09m-yLf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
   </body>
 </html>
